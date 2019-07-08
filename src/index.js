@@ -32,7 +32,7 @@ class App extends React.Component {
 
   //componentDidMount method
   componentDidMount() {
-    console.log("My component was rendered to the screen");
+    console.log("My component was rendered to the screen!");
   }
 
   //componentDidUpdate method
