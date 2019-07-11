@@ -30,12 +30,14 @@ class App extends React.Component {
     );
   }
 
-  //componentDidMount method
+  //Content visible on screen
+  //componentDidMount method (called one time)
   componentDidMount() {
     console.log("My component was rendered to the screen!");
   }
 
-  //componentDidUpdate method
+  //Sit and wait for updates
+  //componentDidUpdate method (called every time the component updates itself)
   componentDidUpdate() {
     console.log("My component was just updated - it rerendered!");
   }
