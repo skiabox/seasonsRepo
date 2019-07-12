@@ -50,9 +50,8 @@ class App extends React.Component {
     console.log("My component was just updated - it rerendered!");
   }
 
-  //React says we have to define render!!
-  //just return jsx
-  render() {
+  //put conditional logic in a helper method
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -62,6 +61,12 @@ class App extends React.Component {
     }
 
     return <Spinner message="Please accept location request" />;
+  }
+
+  //React says we have to define render!!
+  //just return jsx - try not to use conditionals
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
